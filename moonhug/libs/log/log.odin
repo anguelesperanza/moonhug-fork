@@ -2,7 +2,6 @@ package mh_log
 
 import "base:builtin"
 import "base:runtime"
-import "core:c"
 import "core:fmt"
 import "core:strings"
 import "core:sync"
