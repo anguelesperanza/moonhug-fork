@@ -30,3 +30,5 @@ moonhug/ProjectSettings/editor_settings.json
 # file:line in every row changes on most edits, so they are built, not tracked.
 docs/reference/
 .hugo_build.lock
+# The mh the editor's Relaunch builds beside the one that launched it.
+mh_relaunch_*
