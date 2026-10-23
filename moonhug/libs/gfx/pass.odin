@@ -1077,13 +1077,19 @@ draw_fullscreen :: proc(shader: string, inputs: []^Texture, material: []u8 = nil
 	if e, ok := _gfx.fullscreen[shader]; ok {
 		fmt.assertf(u32(len(inputs)) >= e.samplers, "gfx: fullscreen shader %q declares %d inputs, the draw gives %d", shader, e.samplers, len(inputs), loc = loc)
 	}
+	// Read at pass_end, after the caller's frame is gone: keep copies of the
+	// inputs and the material, not the caller's stack slices (nil input = white).
+	tex := make([]^Texture, len(inputs), context.temp_allocator)
+	for in_, i in inputs {
+		if in_ != nil do tex[i] = new_clone(in_^, context.temp_allocator)
+	}
 	append(&_pass.draws, _Draw{
 		fullscreen = true,
-		texture    = inputs[0],
+		texture    = tex[0],
 		vp_index   = _current_vp(),
 		shader     = shader,
-		material   = material,
-		extra_tex  = inputs[1:],
+		material   = slice.clone(material, context.temp_allocator),
+		extra_tex  = tex[1:],
 	})
 }
 
