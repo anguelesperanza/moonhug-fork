@@ -62,8 +62,8 @@ struct LightUBO
 
 struct ClusterUBO
 {
-    GpuLight lights[256];
-    uint4 tile_bits[288];
+    GpuLight lights[24];
+    uint4 tile_bits[144];
 };
 
 struct main0_in

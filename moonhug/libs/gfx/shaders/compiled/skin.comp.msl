@@ -72,7 +72,7 @@ struct Out
 
 constant uint3 gl_WorkGroupSize [[maybe_unused]] = uint3(64u, 1u, 1u);
 
-kernel void main0(constant Params& _19 [[buffer(0)]], device Bind& _41 [[buffer(1)]], device Skin& _108 [[buffer(2)]], device Palette& _178 [[buffer(3)]], device Out& _271 [[buffer(4)]], uint3 gl_GlobalInvocationID [[thread_position_in_grid]])
+kernel void main0(constant Params& _19 [[buffer(0)]], const device Bind& _41 [[buffer(1)]], const device Skin& _108 [[buffer(2)]], const device Palette& _178 [[buffer(3)]], device Out& _271 [[buffer(4)]], uint3 gl_GlobalInvocationID [[thread_position_in_grid]])
 {
     uint i = gl_GlobalInvocationID.x;
     if (i >= _19.vertex_count)

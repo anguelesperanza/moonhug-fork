@@ -36,7 +36,7 @@ layout(location = 5) in vec2 frag_uv2;     // the second texture coordinate set 
 
 layout(set = 2, binding = 0) uniform sampler2D tex;
 
-#define MAX_LIGHTS 256
+#define MAX_LIGHTS 24
 #define MAX_CASCADES 4
 #define MAX_SHADOW_TILES 48
 // The screen's grid of light tiles (gfx CLUSTER_COLS, CLUSTER_ROWS).
@@ -101,11 +101,13 @@ layout(set = 3, binding = 2) uniform DrawUBO {
 // Every light of the pass (gfx.set_lights), and for each tile of the screen's
 // CLUSTER_COLS x CLUSTER_ROWS grid a bit per light that reaches into it: a
 // point or spot light's range sphere covers the tile, a directional light
-// covers every tile. Two uvec4 per tile hold its 256 bits, light i at word
-// i / 32, bit i % 32.
+// covers every tile. One uvec4 per tile holds its bits, light i at bit i.
+// SDL's Vulkan backend binds a uniform buffer with a range of 4096 bytes
+// (SDL_gpu_vulkan.c MAX_UBO_SECTION_SIZE): whatever lies past that reads as
+// zero, so this block, lights and tiles together, must stay within 4096.
 layout(set = 3, binding = 3) uniform ClusterUBO {
     GpuLight lights[MAX_LIGHTS];
-    uvec4 tile_bits[CLUSTER_COLS * CLUSTER_ROWS * 2];
+    uvec4 tile_bits[CLUSTER_COLS * CLUSTER_ROWS];
 };
 
 // Whether light `l` lights this draw: its culling mask (gfx.Light
@@ -123,8 +125,7 @@ int light_tile() {
 
 // Word `w` of tile `tile`'s light bits.
 uint light_tile_word(int tile, int w) {
-    uvec4 v = tile_bits[tile * 2 + (w >> 2)];
-    return v[w & 3];
+    return tile_bits[tile][w & 3];
 }
 
 // The shadow maps, bound by gfx at reserved slots for every shader that

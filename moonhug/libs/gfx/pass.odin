@@ -150,9 +150,10 @@ Fog :: struct {
 }
 
 // Up to MAX_LIGHTS lights reach the shader, in one uniform block with the
-// screen's light tiles (_Cluster_Uniform). Matches the Light component's pool
-// max, so every enabled light in a world fits.
-MAX_LIGHTS :: 256
+// screen's light tiles (_Cluster_Uniform). SDL's Vulkan backend binds a
+// uniform buffer with a range of 4096 bytes and reads past it as zero, so the
+// block, 64 bytes a light and 16 a tile, must fit in that.
+MAX_LIGHTS :: 24
 
 // The screen's grid of light tiles: each tile holds a bit per light that
 // reaches into it, and a fragment lights with its tile's lights only
@@ -331,12 +332,13 @@ _LIGHT_DEFAULT_SUN :: _Gpu_Light{
 	params      = {0, 0, 0, 0hFFFFFFFF}, // w: the bits of a culling mask that lights every layer
 }
 
-// Must match surface.glsl ClusterUBO (std140): the pass's lights, then two
-// uvec4 of light bits per tile (light i at word i / 32, bit i % 32).
+// Must match surface.glsl ClusterUBO (std140): the pass's lights, then one
+// uvec4 of light bits per tile (light i at bit i).
 _Cluster_Uniform :: struct {
 	lights:    [MAX_LIGHTS]_Gpu_Light,
-	tile_bits: [CLUSTER_TILES * 2][4]u32,
+	tile_bits: [CLUSTER_TILES][4]u32,
 }
+#assert(size_of(_Cluster_Uniform) <= 4096, "the light list must fit SDL's Vulkan uniform range (4096 bytes)")
 
 // One view entry per set_view_proj call: the matrix, the camera world
 // position fragment shaders see as cam_pos, and the viewport in pixels
@@ -1270,7 +1272,7 @@ _cluster_bin :: proc(c: ^_Cluster_Uniform, count: int, v: _View) {
 		for y in y0 ..= y1 {
 			for x in x0 ..= x1 {
 				t := y * CLUSTER_COLS + x
-				c.tile_bits[t * 2 + word / 4][word % 4] |= bit
+				c.tile_bits[t][word] |= bit
 			}
 		}
 	}
