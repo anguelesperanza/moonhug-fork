@@ -140,6 +140,7 @@ Update_Proc :: proc(dt: f32)
 // named `comp_update_<T>` (the generator enforces it). `order` sorts it among every @(update)
 // and @(comp_update) proc. The generated loop lives in update_generated.odin
 // next to the dispatcher.
+@(reserved)
 @(extension_point={attribute="comp_update", target="proc", fields="order component"})
 Comp_Update_Proc :: proc(dt: f32, c: rawptr)
 
@@ -155,6 +156,7 @@ Late_Update_Proc :: proc(dt: f32)
 // @(late_update) for every enabled instance of one component type:
 // `component = T`, `proc(dt: f32, c: ^T)` named `comp_late_update_<T>`, as for
 // @(comp_update).
+@(reserved)
 @(extension_point={attribute="comp_late_update", target="proc", fields="order component"})
 Comp_Late_Update_Proc :: proc(dt: f32, c: rawptr)
 

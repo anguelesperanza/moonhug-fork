@@ -1,0 +1,7 @@
+{
+  "name": "psx_camera",
+  "guid": "cafedd56-6ef7-4759-b2ff-fceb3bc5cd47",
+  "description": "Survival-horror cameras for PSX games: fixed shots that cut as the player crosses their zones, and a drag camera that trails the player",
+  "dependencies": ["engine", "psx"],
+  "dependencies_custom": []
+}

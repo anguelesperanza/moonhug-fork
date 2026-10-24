@@ -1,0 +1,141 @@
+#pragma clang diagnostic ignored "-Wmissing-prototypes"
+#pragma clang diagnostic ignored "-Wmissing-braces"
+
+#include <metal_stdlib>
+#include <simd/simd.h>
+
+using namespace metal;
+
+template<typename T, size_t Num>
+struct spvUnsafeArray
+{
+    T elements[Num ? Num : 1];
+    
+    thread T& operator [] (size_t pos) thread
+    {
+        return elements[pos];
+    }
+    constexpr const thread T& operator [] (size_t pos) const thread
+    {
+        return elements[pos];
+    }
+    
+    device T& operator [] (size_t pos) device
+    {
+        return elements[pos];
+    }
+    constexpr const device T& operator [] (size_t pos) const device
+    {
+        return elements[pos];
+    }
+    
+    constexpr const constant T& operator [] (size_t pos) const constant
+    {
+        return elements[pos];
+    }
+    
+    threadgroup T& operator [] (size_t pos) threadgroup
+    {
+        return elements[pos];
+    }
+    constexpr const threadgroup T& operator [] (size_t pos) const threadgroup
+    {
+        return elements[pos];
+    }
+};
+
+struct PsxUBO
+{
+    float4 fog_color;
+    float4 flags;
+    float4 lighting;
+    float4 ambient;
+    float4 ambient_ground;
+    float4 live_dir[3];
+    float4 live_col[3];
+};
+
+constant spvUnsafeArray<float, 16> _250 = spvUnsafeArray<float, 16>({ -4.0, 0.0, -3.0, 1.0, 2.0, -2.0, 3.0, -1.0, -3.0, 1.0, -4.0, 0.0, 3.0, -1.0, 2.0, -2.0 });
+
+struct main0_out
+{
+    float4 out_color [[color(0)]];
+};
+
+struct main0_in
+{
+    float2 frag_uv [[user(locn0)]];
+    float2 frag_uv_affine [[user(locn1), center_no_perspective]];
+    float4 frag_color [[user(locn2)]];
+    float3 frag_normal [[user(locn3)]];
+    float frag_fog [[user(locn4)]];
+    float4 frag_tint [[user(locn5)]];
+};
+
+fragment main0_out main0(main0_in in [[stage_in]], constant PsxUBO& _17 [[buffer(1)]], texture2d<float> tex [[texture(0)]], sampler texSmplr [[sampler(0)]], float4 gl_FragCoord [[position]])
+{
+    main0_out out = {};
+    float2 uv = select(in.frag_uv, in.frag_uv_affine, bool2(_17.flags.x > 0.5));
+    int2 size = int2(tex.get_width(), tex.get_height());
+    int2 texel_pos = min(int2(floor(fract(uv) * float2(size))), (size - int2(1)));
+    float4 texel = tex.read(uint2(texel_pos), 0);
+    if (_17.flags.w > 0.5)
+    {
+        bool _72 = texel.w < 0.5;
+        bool _84;
+        if (!_72)
+        {
+            _84 = all(texel.xyz == float3(0.0));
+        }
+        else
+        {
+            _84 = _72;
+        }
+        if (_84)
+        {
+            discard_fragment();
+        }
+        texel.w = 1.0;
+    }
+    float3 lit = float3(1.0);
+    float lit_alpha = 1.0;
+    if (_17.lighting.x > 0.5)
+    {
+        float3 n = fast::normalize(in.frag_normal);
+        float3 light = _17.ambient.xyz;
+        if (_17.lighting.y > 0.5)
+        {
+            light = mix(_17.ambient_ground.xyz, _17.ambient.xyz, float3((n.y * 0.5) + 0.5));
+        }
+        if (_17.lighting.x < 1.5)
+        {
+            lit = fast::min((in.frag_color.xyz * 2.0) + light, float3(_17.lighting.z));
+        }
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                light += (_17.live_col[i].xyz * fast::max(dot(n, _17.live_dir[i].xyz), 0.0));
+            }
+            lit = fast::min(light, float3(_17.lighting.z)) * in.frag_color.xyz;
+        }
+        lit_alpha = in.frag_color.w;
+    }
+    float4 color = (texel * in.frag_tint) * float4(lit, lit_alpha);
+    float3 rgb = mix(_17.fog_color.xyz, color.xyz, float3(in.frag_fog));
+    if (_17.flags.y > 0.5)
+    {
+        float3 c = floor((fast::clamp(rgb, float3(0.0), float3(1.0)) * 255.0) + float3(0.5));
+        if (_17.flags.z > 0.5)
+        {
+            int2 p = int2(gl_FragCoord.xy);
+            p = int2(p.x & 3, 3 - (p.y & 3));
+            c += float3(_250[(p.y * 4) + p.x]);
+        }
+        c = floor(fast::clamp(c, float3(0.0), float3(255.0)) / float3(8.0));
+        rgb = c / float3(31.0);
+    }
+    out.out_color = float4(fast::clamp(rgb, float3(0.0), float3(1.0)), color.w);
+    return out;
+}
+

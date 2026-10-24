@@ -1,0 +1,7 @@
+{
+  "name": "psx_level",
+  "guid": "0ee34505-25e3-417d-91a1-ee686a477cc0",
+  "description": "What a PSX level needs beyond meshes and colliders: named spawn points and trigger shapes, and gathering a level's lights",
+  "dependencies": ["engine", "psx"],
+  "dependencies_custom": []
+}

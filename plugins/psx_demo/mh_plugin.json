@@ -1,0 +1,7 @@
+{
+  "name": "psx_demo",
+  "guid": "f140b4e4-b26b-482a-8cdb-4efdbd6815d9",
+  "description": "The psx-framework demo as a game: levels, player, camera shots and the debug keys, exportable as a stand-alone program",
+  "dependencies": ["engine", "essentials", "game_export", "physics3d", "psx", "psx_camera", "psx_controls", "psx_level"],
+  "dependencies_custom": []
+}

@@ -20,6 +20,11 @@ import "moonhug:libs/log"
 import anim "moonhug:packages/animation"
 import cgltf "vendor:cgltf"
 
+
+// Package level anim extentions to prevent compiler warning on string literal
+_ANIM_EXTS := []string{".anim"}
+
+
 @(phase={key=ImportersInit, order=1, mode=Editor})
 animation_importers_init :: proc() {
 	@(static) done := false
@@ -28,7 +33,7 @@ animation_importers_init :: proc() {
 	asset_pipeline.importer_register({
 		name         = "animation",
 		version      = 1,
-		extensions   = {".anim"},
+		extensions   = _ANIM_EXTS,
 		settings_tid = typeid_of(anim.Animation_Clip_Settings),
 		run          = _import_animation,
 	})

@@ -20,6 +20,7 @@ import "core:os"
 import "core:path/filepath"
 import "core:strings"
 import "menu"
+import "moonhug:editor/runconfig"
 import "moonhug:libs/log"
 
 RELAUNCH_MARKER :: "builds/relaunch_ready" // relative to the repository root
@@ -41,9 +42,39 @@ relaunch_mode :: proc() -> string {
 	return "debug" when ODIN_DEBUG else "run"
 }
 
+// Where `odin run` puts mh for this editor. Its default, mh<exe> in the repo
+// root, is the very program that launched this editor and is still running as
+// its parent, so on Windows the compiler cannot overwrite it (exit 13). A name
+// per editor pid cannot collide with the launcher's, or with the mh a
+// previous relaunch started. It stays in the repository root: mh starts its
+// cached tools by paths relative to there, and from a subfolder Windows cannot
+// find them.
+RELAUNCH_MH_PREFIX :: "mh_relaunch_"
+
+@(private = "file")
+_relaunch_out :: proc() -> string {
+	return fmt.tprintf("%s%d%s", RELAUNCH_MH_PREFIX, os.get_pid(), runconfig.EXE_SUFFIX)
+}
+
 // The exact command Relaunch runs, for the tooltip.
 relaunch_command :: proc() -> string {
-	return fmt.tprintf("odin run tools/mh -- %s", relaunch_mode())
+	return fmt.tprintf("odin run tools/mh -out:%s -- %s", _relaunch_out(), relaunch_mode())
+}
+
+// Removes the mh binaries earlier relaunches left behind. One still running
+// is locked and stays; the next relaunch tries again.
+@(private = "file")
+_relaunch_sweep_old_mh :: proc(root: string) {
+	dir, err := os.open(root)
+	if err != nil do return
+	defer os.close(dir)
+	files, rerr := os.read_dir(dir, -1, context.temp_allocator)
+	if rerr != nil do return
+	for f in files {
+		if !strings.has_prefix(f.name, RELAUNCH_MH_PREFIX) do continue
+		full, _ := filepath.join({root, f.name}, context.temp_allocator)
+		_ = os.remove(full)
+	}
 }
 
 relaunch_pending :: proc() -> bool {
@@ -75,10 +106,11 @@ relaunch_request :: proc() {
 		}
 	}
 	append(&env, fmt.tprintf("MH_RELAUNCH_PID=%d", os.get_pid()))
+	_relaunch_sweep_old_mh(root)
 
 	process, err := os.process_start({
 		working_dir = root,
-		command     = {"odin", "run", "tools/mh", "--", mode},
+		command     = {"odin", "run", "tools/mh", fmt.tprintf("-out:%s", _relaunch_out()), "--", mode},
 		env         = env[:],
 		stdout      = os.stdout,
 		stderr      = os.stderr,

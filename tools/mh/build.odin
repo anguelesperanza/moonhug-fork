@@ -82,9 +82,28 @@ RELAUNCH_MARKER :: "builds/relaunch_ready"
 // writes no marker, so the old editor stays up with the compiler output in
 // its terminal.
 launch_editor :: proc(mode: string) -> int {
-	if !build_editor(mode == "debug") do return 1
+	pid_str, relaunching := os.lookup_env("MH_RELAUNCH_PID", context.temp_allocator)
 
-	if pid_str, relaunching := os.lookup_env("MH_RELAUNCH_PID", context.temp_allocator); relaunching {
+	// Windows will not let the linker overwrite an exe that is running, but it
+	// does let that exe be renamed. The running editor steps aside for the
+	// build and comes back if the build fails.
+	aside := ""
+	when ODIN_OS == .Windows {
+		if relaunching && os.exists(EDITOR_BIN) {
+			candidate := fmt.tprintf("builds/MoonHug_replaced_%s%s", pid_str, EXE)
+			_ = os.remove(candidate)
+			if os.rename(EDITOR_BIN, candidate) == nil do aside = strings.clone(candidate, context.temp_allocator)
+		}
+	}
+	if !build_editor(mode == "debug") {
+		if aside != "" {
+			_ = os.remove(EDITOR_BIN) // a half-written output, if any
+			_ = os.rename(aside, EDITOR_BIN)
+		}
+		return 1
+	}
+
+	if relaunching {
 		if pid, ok := strconv.parse_int(pid_str); ok {
 			_ = os.write_entire_file(RELAUNCH_MARKER, "ready")
 			fmt.printfln("mh: built, waiting for editor %d to exit", pid)
@@ -96,6 +115,7 @@ launch_editor :: proc(mode: string) -> int {
 			_ = os.remove(RELAUNCH_MARKER)
 		}
 	}
+	if aside != "" do _ = os.remove(aside) // the old editor has exited, so it is no longer locked
 
 	env := make([dynamic]string, context.temp_allocator)
 	if cur, err := os.environ(context.temp_allocator); err == nil {

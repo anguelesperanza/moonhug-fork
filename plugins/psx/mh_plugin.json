@@ -1,0 +1,7 @@
+{
+  "name": "psx",
+  "guid": "22ed8c37-0e83-4c76-956f-0ca08d1e8b73",
+  "description": "PlayStation 1 style renderer: vertex snapping, affine texturing, vertex lighting, 15-bit dithering, fog, CRT post effects",
+  "dependencies": ["engine"],
+  "dependencies_custom": []
+}

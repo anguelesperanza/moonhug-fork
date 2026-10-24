@@ -1,0 +1,208 @@
+#pragma clang diagnostic ignored "-Wmissing-prototypes"
+
+#include <metal_stdlib>
+#include <simd/simd.h>
+
+using namespace metal;
+
+// Implementation of signed integer mod accurate to SPIR-V specification
+template<typename Tx, typename Ty>
+inline Tx spvSMod(Tx x, Ty y)
+{
+    Tx remainder = x - y * (x / y);
+    return select(Tx(remainder + y), remainder, remainder == 0 || (x >= 0) == (y >= 0));
+}
+
+struct PresentUBO
+{
+    float4 rect;
+    float4 source;
+    float4 effect;
+    float4 extra;
+};
+
+struct main0_out
+{
+    float4 out_color [[color(0)]];
+};
+
+static inline __attribute__((always_inline))
+float3 fetch(thread const float2& uv, constant PresentUBO& _29, texture2d<float> tex, sampler texSmplr)
+{
+    int2 size = int2(_29.source.xy);
+    return tex.read(uint2(clamp(int2(floor(uv * _29.source.xy)), int2(0), size - int2(1))), 0).xyz;
+}
+
+static inline __attribute__((always_inline))
+float3 composite(thread const float2& uv, constant PresentUBO& _29, texture2d<float> tex, sampler texSmplr)
+{
+    float2 param = uv;
+    float3 c = fetch(param, _29, tex, texSmplr);
+    float blur = _29.effect.x;
+    if (blur <= 0.0)
+    {
+        return c;
+    }
+    float2 dx = float2(1.0 / _29.source.x, 0.0);
+    float2 param_1 = uv - dx;
+    float3 l1 = fetch(param_1, _29, tex, texSmplr);
+    float2 param_2 = uv + dx;
+    float3 r1 = fetch(param_2, _29, tex, texSmplr);
+    float2 param_3 = uv - (dx * 2.0);
+    float3 l2 = fetch(param_3, _29, tex, texSmplr);
+    float2 param_4 = uv + (dx * 2.0);
+    float3 r2 = fetch(param_4, _29, tex, texSmplr);
+    float3 sharp = float3x3(float3(0.2989999949932098388671875, 0.596000015735626220703125, 0.2109999954700469970703125), float3(0.58700001239776611328125, -0.273999989032745361328125, -0.5230000019073486328125), float3(0.114000000059604644775390625, -0.3219999969005584716796875, 0.3120000064373016357421875)) * c;
+    float3 near = float3x3(float3(0.2989999949932098388671875, 0.596000015735626220703125, 0.2109999954700469970703125), float3(0.58700001239776611328125, -0.273999989032745361328125, -0.5230000019073486328125), float3(0.114000000059604644775390625, -0.3219999969005584716796875, 0.3120000064373016357421875)) * ((c * 0.5) + ((l1 + r1) * 0.25));
+    float3 wide = float3x3(float3(0.2989999949932098388671875, 0.596000015735626220703125, 0.2109999954700469970703125), float3(0.58700001239776611328125, -0.273999989032745361328125, -0.5230000019073486328125), float3(0.114000000059604644775390625, -0.3219999969005584716796875, 0.3120000064373016357421875)) * (((((c + l1) + r1) + l2) + r2) / float3(5.0));
+    float3 yiq = float3(mix(sharp.x, near.x, blur), mix(sharp.yz, wide.yz, float2(blur)));
+    return fast::clamp(float3x3(float3(1.0), float3(0.95599997043609619140625, -0.272000014781951904296875, -1.10599994659423828125), float3(0.620999991893768310546875, -0.647000014781951904296875, 1.70299994945526123046875)) * yiq, float3(0.0), float3(1.0));
+}
+
+static inline __attribute__((always_inline))
+float3 to_linear(thread const float3& c)
+{
+    return mix(powr((c + float3(0.054999999701976776123046875)) / float3(1.05499994754791259765625), float3(2.400000095367431640625)), c / float3(12.9200000762939453125), float3(c <= float3(0.040449999272823333740234375)));
+}
+
+fragment main0_out main0(constant PresentUBO& _29 [[buffer(1)]], texture2d<float> tex [[texture(0)]], sampler texSmplr [[sampler(0)]], float4 gl_FragCoord [[position]])
+{
+    main0_out out = {};
+    float2 pixel = gl_FragCoord.xy;
+    float2 uv = (pixel - _29.rect.xy) / _29.rect.zw;
+    bool _229 = uv.x < 0.0;
+    bool _236;
+    if (!_229)
+    {
+        _236 = uv.x >= 1.0;
+    }
+    else
+    {
+        _236 = _229;
+    }
+    bool _244;
+    if (!_236)
+    {
+        _244 = uv.y < 0.0;
+    }
+    else
+    {
+        _244 = _236;
+    }
+    bool _251;
+    if (!_244)
+    {
+        _251 = uv.y >= 1.0;
+    }
+    else
+    {
+        _251 = _244;
+    }
+    if (_251)
+    {
+        out.out_color = float4(0.0, 0.0, 0.0, 1.0);
+        return out;
+    }
+    float3 color;
+    if (_29.extra.z < 0.5)
+    {
+        float2 param = uv;
+        color = fetch(param, _29, tex, texSmplr);
+    }
+    else
+    {
+        float curvature = _29.effect.z;
+        if (curvature > 0.0)
+        {
+            float2 centred = (uv * 2.0) - float2(1.0);
+            if (_29.extra.y > 0.5)
+            {
+                float zoom = 1.0 / (1.0 + (2.0 * curvature));
+                for (int i = 0; i < 3; i++)
+                {
+                    zoom -= (((((((2.0 * curvature) * zoom) * zoom) * zoom) + zoom) - 1.0) / ((((6.0 * curvature) * zoom) * zoom) + 1.0));
+                }
+                centred *= zoom;
+            }
+            centred *= (1.0 + (curvature * dot(centred, centred)));
+            uv = (centred * 0.5) + float2(0.5);
+            bool _342 = uv.x < 0.0;
+            bool _349;
+            if (!_342)
+            {
+                _349 = uv.x > 1.0;
+            }
+            else
+            {
+                _349 = _342;
+            }
+            bool _356;
+            if (!_349)
+            {
+                _356 = uv.y < 0.0;
+            }
+            else
+            {
+                _356 = _349;
+            }
+            bool _363;
+            if (!_356)
+            {
+                _363 = uv.y > 1.0;
+            }
+            else
+            {
+                _363 = _356;
+            }
+            if (_363)
+            {
+                out.out_color = float4(0.0, 0.0, 0.0, 1.0);
+                return out;
+            }
+        }
+        float2 param_1 = uv;
+        color = composite(param_1, _29, tex, texSmplr);
+        float scanlines = _29.effect.y;
+        if (scanlines > 0.0)
+        {
+            float row = fract(uv.y * _29.source.y);
+            color *= (mix(1.0, 0.25 + (0.75 * sin(row * 3.1415927410125732421875)), scanlines) * (1.0 + (0.25 * scanlines)));
+        }
+        float mask = _29.extra.x;
+        if (mask > 0.0)
+        {
+            int column = spvSMod(int(gl_FragCoord.x), 3);
+            float dim = 1.0 - (0.3499999940395355224609375 * mask);
+            float3 _420;
+            if (column == 0)
+            {
+                _420 = float3(1.0, dim, dim);
+            }
+            else
+            {
+                float3 _428;
+                if (column == 1)
+                {
+                    _428 = float3(dim, 1.0, dim);
+                }
+                else
+                {
+                    _428 = float3(dim, dim, 1.0);
+                }
+                _420 = _428;
+            }
+            float3 stripe = _420;
+            color *= stripe;
+        }
+        float vignette = _29.effect.w;
+        if (vignette > 0.0)
+        {
+            float2 centred_1 = (uv * 2.0) - float2(1.0);
+            color *= fast::clamp(1.0 - ((dot(centred_1, centred_1) * 0.5) * vignette), 0.0, 1.0);
+        }
+    }
+    float3 param_2 = fast::clamp(color, float3(0.0), float3(1.0));
+    out.out_color = float4(to_linear(param_2), 1.0);
+    return out;
+}
+
