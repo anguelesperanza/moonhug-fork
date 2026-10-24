@@ -1,0 +1,425 @@
+{
+  "root": 4328972305845076,
+  "transforms": [
+    {
+      "local_id": 4328972305845076,
+      "name": "table",
+      "is_active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 0,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 1663788504569073,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": [
+
+      ]
+    },
+    {
+      "local_id": 1663788504569073,
+      "name": "table",
+      "is_active": true,
+      "position": [
+        0.40625,
+        -0.009375,
+        0.171875
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4328972305845076,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 4146722730919783,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 2305586691714285,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 3255103852175854,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 1928500548516115,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 791245251340618,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": [
+
+      ]
+    },
+    {
+      "local_id": 4146722730919783,
+      "name": "mesh",
+      "is_active": true,
+      "position": [
+        0.0,
+        0.0,
+        -0.34375
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 1663788504569073,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+
+      ],
+      "components": [
+        {
+          "local_id": 4275076220448938
+        },
+        {
+          "local_id": 558546588126394
+        }
+      ]
+    },
+    {
+      "local_id": 2305586691714285,
+      "name": "mesh",
+      "is_active": true,
+      "position": [
+        -0.40625,
+        0.25,
+        -0.171875
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 1663788504569073,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+
+      ],
+      "components": [
+        {
+          "local_id": 2509763711271791
+        },
+        {
+          "local_id": 253416169877099
+        }
+      ]
+    },
+    {
+      "local_id": 3255103852175854,
+      "name": "mesh",
+      "is_active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 1663788504569073,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+
+      ],
+      "components": [
+        {
+          "local_id": 1992810422059173
+        },
+        {
+          "local_id": 2052254710076345
+        }
+      ]
+    },
+    {
+      "local_id": 1928500548516115,
+      "name": "mesh",
+      "is_active": true,
+      "position": [
+        -0.80624998,
+        0.0,
+        -0.34375
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 1663788504569073,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+
+      ],
+      "components": [
+        {
+          "local_id": 4269830569701050
+        },
+        {
+          "local_id": 4436701508316953
+        }
+      ]
+    },
+    {
+      "local_id": 791245251340618,
+      "name": "mesh",
+      "is_active": true,
+      "position": [
+        -0.80624998,
+        0.0,
+        -0.021875
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 1663788504569073,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+
+      ],
+      "components": [
+        {
+          "local_id": 816638608957383
+        },
+        {
+          "local_id": 3176760243413239
+        }
+      ]
+    }
+  ],
+  "nested_scenes": [
+
+  ],
+  "breadcrumbs": [
+
+  ],
+  "components": [
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 4275076220448938
+      },
+      "mesh": {
+        "guid": "849638f6-21a7-4060-b4fc-5ad1c27a91d7",
+        "local_id": 1
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 558546588126394
+      },
+      "cast_shadows": 0,
+      "materials": [
+        "62d93021-1385-416c-adeb-d25b15e31828"
+      ],
+      "reflections": 0
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 2509763711271791
+      },
+      "mesh": {
+        "guid": "849638f6-21a7-4060-b4fc-5ad1c27a91d7",
+        "local_id": 2
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 253416169877099
+      },
+      "cast_shadows": 0,
+      "materials": [
+        "ca972f03-aa65-46e9-af89-f53598be401e"
+      ],
+      "reflections": 0
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1992810422059173
+      },
+      "mesh": {
+        "guid": "849638f6-21a7-4060-b4fc-5ad1c27a91d7",
+        "local_id": 3
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2052254710076345
+      },
+      "cast_shadows": 0,
+      "materials": [
+        "62d93021-1385-416c-adeb-d25b15e31828"
+      ],
+      "reflections": 0
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 4269830569701050
+      },
+      "mesh": {
+        "guid": "849638f6-21a7-4060-b4fc-5ad1c27a91d7",
+        "local_id": 4
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 4436701508316953
+      },
+      "cast_shadows": 0,
+      "materials": [
+        "62d93021-1385-416c-adeb-d25b15e31828"
+      ],
+      "reflections": 0
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 816638608957383
+      },
+      "mesh": {
+        "guid": "849638f6-21a7-4060-b4fc-5ad1c27a91d7",
+        "local_id": 5
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3176760243413239
+      },
+      "cast_shadows": 0,
+      "materials": [
+        "62d93021-1385-416c-adeb-d25b15e31828"
+      ],
+      "reflections": 0
+    }
+  ]
+}

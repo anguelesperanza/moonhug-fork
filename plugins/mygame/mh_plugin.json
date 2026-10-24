@@ -1,0 +1,7 @@
+{
+  "name": "mygame",
+  "guid": "eca820c2-de4e-4ca4-92a3-19b5e04e4820",
+  "description": "",
+  "dependencies": ["engine", "essentials", "physics3d"],
+  "dependencies_custom": []
+}
