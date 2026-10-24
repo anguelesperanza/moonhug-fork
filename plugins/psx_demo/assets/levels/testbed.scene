@@ -1,0 +1,5101 @@
+{
+  "root": 2563464692609526,
+  "transforms": [
+    {
+      "local_id": 2563464692609526,
+      "name": "testbed",
+      "is_active": true,
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 0,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 284209856297925,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 531056621794365,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 2197108103261837,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 4237499973002464,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": [
+        {
+          "local_id": 3613080452950752
+        }
+      ]
+    },
+    {
+      "local_id": 284209856297925,
+      "name": "floor",
+      "is_active": true,
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2563464692609526,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 945553322657303,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 925421834413613,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": []
+    },
+    {
+      "local_id": 531056621794365,
+      "name": "dresser_two 91",
+      "is_active": true,
+      "position": [
+        2.62376404,
+        0.0625,
+        -2.7199738
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2563464692609526,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 3427068202505596
+        },
+        {
+          "local_id": 2126805311019172
+        },
+        {
+          "local_id": 1709636005579804
+        }
+      ]
+    },
+    {
+      "local_id": 945553322657303,
+      "name": "floor",
+      "is_active": true,
+      "position": [
+        0.0,
+        0.0,
+        29.84448624
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 284209856297925,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 1642626863922253,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": []
+    },
+    {
+      "local_id": 2197108103261837,
+      "name": "walls",
+      "is_active": true,
+      "position": [
+        3.50000143,
+        0.53125,
+        -4.99996328
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2563464692609526,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 4023138937587625,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 3133749882127783,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 460390194299555,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 41457349689887,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 3268948666602742,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 2489859095498005,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 4288526819037845,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 4153167045708360,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 1334823694464190,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 2255402050824696,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 855006313522507,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": []
+    },
+    {
+      "local_id": 4023138937587625,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        31.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1755545702020019
+        },
+        {
+          "local_id": 2735655508103815
+        },
+        {
+          "local_id": 3454973751118214
+        }
+      ]
+    },
+    {
+      "local_id": 3133749882127783,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        29.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1199444544775470
+        },
+        {
+          "local_id": 3611104227285247
+        },
+        {
+          "local_id": 2662318065330482
+        }
+      ]
+    },
+    {
+      "local_id": 460390194299555,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        27.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1429579441107770
+        },
+        {
+          "local_id": 100528135913181
+        },
+        {
+          "local_id": 2925293744660154
+        }
+      ]
+    },
+    {
+      "local_id": 41457349689887,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        25.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 3968725613810763
+        },
+        {
+          "local_id": 3091647945939408
+        },
+        {
+          "local_id": 4364168739360480
+        }
+      ]
+    },
+    {
+      "local_id": 3268948666602742,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        23.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 2376229435946888
+        },
+        {
+          "local_id": 3439402172860670
+        },
+        {
+          "local_id": 4229629839238817
+        }
+      ]
+    },
+    {
+      "local_id": 2489859095498005,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        21.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1556896581119034
+        },
+        {
+          "local_id": 3048255245652448
+        },
+        {
+          "local_id": 3427002589776042
+        }
+      ]
+    },
+    {
+      "local_id": 4288526819037845,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        19.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 4172613512274091
+        },
+        {
+          "local_id": 1874306640402806
+        },
+        {
+          "local_id": 4126513686086303
+        }
+      ]
+    },
+    {
+      "local_id": 4153167045708360,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        17.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 450360144389972
+        },
+        {
+          "local_id": 2834352796306824
+        },
+        {
+          "local_id": 3258982497473329
+        }
+      ]
+    },
+    {
+      "local_id": 1334823694464190,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        15.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 3346832309789937
+        },
+        {
+          "local_id": 4033310727308023
+        },
+        {
+          "local_id": 4383137483404201
+        }
+      ]
+    },
+    {
+      "local_id": 2255402050824696,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        13.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 4355929788813821
+        },
+        {
+          "local_id": 2286556501980250
+        },
+        {
+          "local_id": 4099111762343950
+        }
+      ]
+    },
+    {
+      "local_id": 855006313522507,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        11.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2197108103261837,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1279738348408606
+        },
+        {
+          "local_id": 4384034556456610
+        },
+        {
+          "local_id": 2248930270782661
+        }
+      ]
+    },
+    {
+      "local_id": 4237499973002464,
+      "name": "walls",
+      "is_active": true,
+      "position": [
+        20.10332108,
+        0.53125,
+        -28.99996376
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 2563464692609526,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [
+        {
+          "pptr": {
+            "local_id": 1771508676052934,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 1820751730749273,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 3494061994048168,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 486080812432662,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 3300083174772221,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 2768862264307900,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 1022036869821653,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 2469498220966757,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 1591004396936271,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 3284928242750086,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        },
+        {
+          "pptr": {
+            "local_id": 4226444898904632,
+            "guid": "00000000-0000-0000-0000-000000000000"
+          }
+        }
+      ],
+      "components": []
+    },
+    {
+      "local_id": 1771508676052934,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        31.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 3842868683266586
+        },
+        {
+          "local_id": 2162748110057304
+        },
+        {
+          "local_id": 3349465648084196
+        }
+      ]
+    },
+    {
+      "local_id": 1820751730749273,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        29.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 2993740013665142
+        },
+        {
+          "local_id": 1653378468427417
+        },
+        {
+          "local_id": 3975471330890576
+        }
+      ]
+    },
+    {
+      "local_id": 3494061994048168,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        27.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 3324629706545772
+        },
+        {
+          "local_id": 389413409163664
+        },
+        {
+          "local_id": 2989299123341847
+        }
+      ]
+    },
+    {
+      "local_id": 486080812432662,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        25.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 737234479743972
+        },
+        {
+          "local_id": 3782807568267333
+        },
+        {
+          "local_id": 1668686677827002
+        }
+      ]
+    },
+    {
+      "local_id": 3300083174772221,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        23.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 2113626547829127
+        },
+        {
+          "local_id": 1389490826509229
+        },
+        {
+          "local_id": 3820410790533437
+        }
+      ]
+    },
+    {
+      "local_id": 2768862264307900,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        21.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 2603873715544974
+        },
+        {
+          "local_id": 2914532137824996
+        },
+        {
+          "local_id": 759277935133007
+        }
+      ]
+    },
+    {
+      "local_id": 1022036869821653,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        19.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 55405001138172
+        },
+        {
+          "local_id": 898544827433278
+        },
+        {
+          "local_id": 4143700865474156
+        }
+      ]
+    },
+    {
+      "local_id": 2469498220966757,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        17.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1821500922389768
+        },
+        {
+          "local_id": 1548453880957482
+        },
+        {
+          "local_id": 3816627994158866
+        }
+      ]
+    },
+    {
+      "local_id": 1591004396936271,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        15.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 4097173139073068
+        },
+        {
+          "local_id": 2968837170364396
+        },
+        {
+          "local_id": 2742442051337321
+        }
+      ]
+    },
+    {
+      "local_id": 3284928242750086,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        13.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 1727981331818306
+        },
+        {
+          "local_id": 3859357898744092
+        },
+        {
+          "local_id": 4299347391634778
+        }
+      ]
+    },
+    {
+      "local_id": 4226444898904632,
+      "name": "bedroom-wall 2731",
+      "is_active": true,
+      "position": [
+        -6.61353064,
+        -0.46875,
+        11.40169334
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        2.0,
+        2.0
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 4237499973002464,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 2308097130471864
+        },
+        {
+          "local_id": 582087507954409
+        },
+        {
+          "local_id": 3501087768713626
+        }
+      ]
+    },
+    {
+      "local_id": 925421834413613,
+      "name": "tiles",
+      "is_active": true,
+      "position": [
+        -20,
+        0.0,
+        -20
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 284209856297925,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 4277153601701724
+        },
+        {
+          "local_id": 2166686687828155
+        }
+      ]
+    },
+    {
+      "local_id": 1642626863922253,
+      "name": "tiles",
+      "is_active": true,
+      "position": [
+        -20,
+        0.0,
+        -20
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "render_layer": 1,
+      "parent": {
+        "pptr": {
+          "local_id": 945553322657303,
+          "guid": "00000000-0000-0000-0000-000000000000"
+        }
+      },
+      "children": [],
+      "components": [
+        {
+          "local_id": 2496800081279483
+        },
+        {
+          "local_id": 4237948168482057
+        }
+      ]
+    }
+  ],
+  "nested_scenes": [],
+  "breadcrumbs": [],
+  "components": [
+    {
+      "__type": "5bdf6d7c-4cf9-42c5-9408-ee32b034b656",
+      "base": {
+        "enabled": true,
+        "local_id": 3613080452950752
+      },
+      "lighting_enabled": true,
+      "ambient_kind": 0,
+      "ambient_color": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ambient_ground_color": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 3427068202505596
+      },
+      "mesh": {
+        "guid": "81fe9f95-d8c3-4f0c-ad7c-9bf60e71d7ba",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2126805311019172
+      },
+      "materials": [
+        "487b375e-c785-4807-a5d3-4465d252caff",
+        "8f12dcdf-cf72-437d-b2df-183e7c52690f",
+        "7ae41cd3-44b7-4c9f-8297-5108f9ac33ee",
+        "ec5c59f3-beca-4e88-99af-31370dd0a5a8",
+        "fac29123-a550-48ed-b54a-562d882ae7b6",
+        "0d1e084e-4973-4345-965e-476f4d012e5d",
+        "1a82b37b-6998-4231-8244-f2a7a074a3a8"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 1709636005579804
+      },
+      "size": [
+        2.9749999,
+        1.0,
+        1.0625
+      ],
+      "center": [
+        -0.01249999,
+        0.5,
+        -0.03125
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1755545702020019
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2735655508103815
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3454973751118214
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1199444544775470
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3611104227285247
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 2662318065330482
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1429579441107770
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 100528135913181
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 2925293744660154
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 3968725613810763
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3091647945939408
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4364168739360480
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 2376229435946888
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3439402172860670
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4229629839238817
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1556896581119034
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3048255245652448
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3427002589776042
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 4172613512274091
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 1874306640402806
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4126513686086303
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 450360144389972
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2834352796306824
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3258982497473329
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 3346832309789937
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 4033310727308023
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4383137483404201
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 4355929788813821
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2286556501980250
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4099111762343950
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1279738348408606
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 4384034556456610
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 2248930270782661
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 3842868683266586
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2162748110057304
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3349465648084196
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 2993740013665142
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 1653378468427417
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3975471330890576
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 3324629706545772
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 389413409163664
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 2989299123341847
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 737234479743972
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3782807568267333
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 1668686677827002
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 2113626547829127
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 1389490826509229
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3820410790533437
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 2603873715544974
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2914532137824996
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 759277935133007
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 55405001138172
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 898544827433278
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4143700865474156
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1821500922389768
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 1548453880957482
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3816627994158866
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 4097173139073068
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 2968837170364396
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 2742442051337321
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 1727981331818306
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 3859357898744092
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4299347391634778
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "32f52908-51a9-4f3b-819b-fc9d8cbc5972",
+      "base": {
+        "enabled": true,
+        "local_id": 2308097130471864
+      },
+      "mesh": {
+        "guid": "dd81869f-c428-427a-af04-8e85b1e6d304",
+        "local_id": 0
+      }
+    },
+    {
+      "__type": "73e161a0-c599-4cfb-9826-447e05baa76c",
+      "base": {
+        "enabled": true,
+        "local_id": 582087507954409
+      },
+      "materials": [
+        "dfa58f1b-322e-4638-91cb-0260e1558646",
+        "efaaeb47-a111-4ffe-b6a7-07ebb72fc451"
+      ],
+      "cast_shadows": 0,
+      "reflections": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 3501087768713626
+      },
+      "size": [
+        0.03125,
+        1.25,
+        1.0
+      ],
+      "center": [
+        0.0,
+        0.625,
+        0.0
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "6f04a0a6-1b09-4d6d-9b35-7c19e8e8d27c",
+      "base": {
+        "enabled": true,
+        "local_id": 4277153601701724
+      },
+      "mesh": "e632b138-7d27-4849-8408-a0ab320fb0d5",
+      "materials": [
+        "29791ecd-69c4-4ff9-b4f6-6ba8974373dc"
+      ],
+      "columns": 42,
+      "rows": 30,
+      "spacing": [
+        1.0,
+        1.0
+      ],
+      "turns": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "random_rotation": false,
+      "seed": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 2166686687828155
+      },
+      "size": [
+        42,
+        0.0625,
+        30
+      ],
+      "center": [
+        20.5,
+        0.03125,
+        14.5
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    },
+    {
+      "__type": "6f04a0a6-1b09-4d6d-9b35-7c19e8e8d27c",
+      "base": {
+        "enabled": true,
+        "local_id": 2496800081279483
+      },
+      "mesh": "e632b138-7d27-4849-8408-a0ab320fb0d5",
+      "materials": [
+        "29791ecd-69c4-4ff9-b4f6-6ba8974373dc"
+      ],
+      "columns": 42,
+      "rows": 30,
+      "spacing": [
+        1.0,
+        1.0
+      ],
+      "turns": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        2,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        2,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2,
+        0,
+        3,
+        0,
+        3,
+        3,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        0,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        3,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3
+      ],
+      "random_rotation": false,
+      "seed": 0
+    },
+    {
+      "__type": "13101cd5-e0a6-49d4-a310-953001ebae6b",
+      "base": {
+        "enabled": true,
+        "local_id": 4237948168482057
+      },
+      "size": [
+        42,
+        0.0625,
+        30
+      ],
+      "center": [
+        20.5,
+        0.03125,
+        14.5
+      ],
+      "density": 1.0,
+      "is_trigger": false,
+      "layers": 1,
+      "layer_overrides": {
+        "include": 0,
+        "exclude": 0
+      },
+      "material": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}

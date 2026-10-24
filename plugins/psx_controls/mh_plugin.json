@@ -1,0 +1,7 @@
+{
+  "name": "psx_controls",
+  "guid": "608326cd-71d6-4d66-a691-878f35d04b43",
+  "description": "Character controls for PSX games: tank controls (turn in place, walk along the facing) and camera-relative controls with a held basis across camera cuts",
+  "dependencies": ["engine", "psx"],
+  "dependencies_custom": []
+}

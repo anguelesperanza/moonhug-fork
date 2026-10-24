@@ -1,0 +1,7 @@
+{
+  "name": "game_export",
+  "guid": "e5d6a401-c6b0-44ad-9df2-8001522b6e48",
+  "description": "Export a game as a program that runs outside the repository: the start-up a game's main needs, and the run configuration helpers that stage and package the build",
+  "dependencies": [],
+  "dependencies_custom": []
+}

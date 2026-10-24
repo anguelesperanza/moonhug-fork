@@ -1,0 +1,119 @@
+#pragma clang diagnostic ignored "-Wmissing-prototypes"
+
+#include <metal_stdlib>
+#include <simd/simd.h>
+
+using namespace metal;
+
+// Returns the determinant of a 2x2 matrix.
+static inline __attribute__((always_inline))
+float spvDet2x2(float a1, float a2, float b1, float b2)
+{
+    return a1 * b2 - b1 * a2;
+}
+
+// Returns the inverse of a matrix, by using the algorithm of calculating the classical
+// adjoint and dividing by the determinant. The contents of the matrix are changed.
+static inline __attribute__((always_inline))
+float3x3 spvInverse3x3(float3x3 m)
+{
+    float3x3 adj;	// The adjoint matrix (inverse after dividing by determinant)
+
+    // Create the transpose of the cofactors, as the classical adjoint of the matrix.
+    adj[0][0] =  spvDet2x2(m[1][1], m[1][2], m[2][1], m[2][2]);
+    adj[0][1] = -spvDet2x2(m[0][1], m[0][2], m[2][1], m[2][2]);
+    adj[0][2] =  spvDet2x2(m[0][1], m[0][2], m[1][1], m[1][2]);
+
+    adj[1][0] = -spvDet2x2(m[1][0], m[1][2], m[2][0], m[2][2]);
+    adj[1][1] =  spvDet2x2(m[0][0], m[0][2], m[2][0], m[2][2]);
+    adj[1][2] = -spvDet2x2(m[0][0], m[0][2], m[1][0], m[1][2]);
+
+    adj[2][0] =  spvDet2x2(m[1][0], m[1][1], m[2][0], m[2][1]);
+    adj[2][1] = -spvDet2x2(m[0][0], m[0][1], m[2][0], m[2][1]);
+    adj[2][2] =  spvDet2x2(m[0][0], m[0][1], m[1][0], m[1][1]);
+
+    // Calculate the determinant as a combination of the cofactors of the first row.
+    float det = (adj[0][0] * m[0][0]) + (adj[0][1] * m[1][0]) + (adj[0][2] * m[2][0]);
+
+    // Divide the classical adjoint matrix by the determinant.
+    // If determinant is zero, matrix is not invertable, so leave it unchanged.
+    return (det != 0.0f) ? (adj * (1.0f / det)) : m;
+}
+
+struct UBO
+{
+    float4x4 view_proj;
+    float4 vert_params;
+};
+
+struct main0_out
+{
+    float2 frag_uv [[user(locn0)]];
+    float2 frag_uv_affine [[user(locn1)]];
+    float4 frag_color [[user(locn2)]];
+    float3 frag_normal [[user(locn3)]];
+    float frag_fog [[user(locn4)]];
+    float4 frag_tint [[user(locn5)]];
+    float4 gl_Position [[position]];
+};
+
+struct main0_in
+{
+    float3 in_position [[attribute(0)]];
+    float3 in_normal [[attribute(1)]];
+    float2 in_uv [[attribute(2)]];
+    float4 in_color [[attribute(3)]];
+    float4 in_model0 [[attribute(5)]];
+    float4 in_model1 [[attribute(6)]];
+    float4 in_model2 [[attribute(7)]];
+    float4 in_model3 [[attribute(8)]];
+    float4 in_tint [[attribute(9)]];
+};
+
+vertex main0_out main0(main0_in in [[stage_in]], constant UBO& _102 [[buffer(0)]])
+{
+    main0_out out = {};
+    float2 resolution = float2(in.in_model0.w, in.in_model1.w);
+    float fog_start = in.in_model2.w;
+    float fog_end = in.in_model3.w;
+    float4x4 model = float4x4(float4(float4(in.in_model0.xyz, 0.0)), float4(float4(in.in_model1.xyz, 0.0)), float4(float4(in.in_model2.xyz, 0.0)), float4(float4(in.in_model3.xyz, 1.0)));
+    float4 world = model * float4(in.in_position, 1.0);
+    out.gl_Position = _102.view_proj * world;
+    out.frag_uv = in.in_uv;
+    out.frag_uv_affine = in.in_uv;
+    out.frag_color = in.in_color;
+    out.frag_tint = in.in_tint;
+    out.frag_normal = transpose(spvInverse3x3(float3x3(model[0].xyz, model[1].xyz, model[2].xyz))) * in.in_normal;
+    float depth = out.gl_Position.w;
+    float _148;
+    if (fog_end > fog_start)
+    {
+        _148 = fast::clamp((fog_end - depth) / (fog_end - fog_start), 0.0, 1.0);
+    }
+    else
+    {
+        _148 = 1.0;
+    }
+    out.frag_fog = _148;
+    bool _164 = resolution.x > 0.0;
+    bool _170;
+    if (_164)
+    {
+        _170 = out.gl_Position.w > 0.0;
+    }
+    else
+    {
+        _170 = _164;
+    }
+    if (_170)
+    {
+        float2 screen = (((out.gl_Position.xy / float2(out.gl_Position.w)) * 0.5) + float2(0.5)) * resolution;
+        float2 ndc = ((floor(screen + float2(0.5)) / resolution) * 2.0) - float2(1.0);
+        float _200 = out.gl_Position.w;
+        float2 _201 = ndc * _200;
+        out.gl_Position.x = _201.x;
+        out.gl_Position.y = _201.y;
+    }
+    return out;
+}
+

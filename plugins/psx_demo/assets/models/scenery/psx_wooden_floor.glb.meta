@@ -1,0 +1,17 @@
+{
+  "guid": "e632b138-7d27-4849-8408-a0ab320fb0d5",
+  "importer": "mesh",
+  "settings": {
+    "__type_guid": "fadd5659-ad40-4e00-95c7-908efc8e8631",
+    "clips": [
+
+    ],
+    "parts": [
+      {
+        "id": 1,
+        "name": "mesh_0"
+      }
+    ],
+    "scale": 1.0000000000000000
+  }
+}

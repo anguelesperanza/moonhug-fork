@@ -1,0 +1,65 @@
+#include <metal_stdlib>
+#include <simd/simd.h>
+
+using namespace metal;
+
+struct CompositeUBO
+{
+    float4 params;
+};
+
+struct main0_out
+{
+    float4 out_color [[color(0)]];
+};
+
+struct main0_in
+{
+    float2 frag_uv [[user(locn0)]];
+};
+
+fragment main0_out main0(main0_in in [[stage_in]], constant CompositeUBO& _65 [[buffer(1)]], texture2d<float> frame [[texture(0)]], texture2d<float> layer [[texture(1)]], sampler frameSmplr [[sampler(0)]], sampler layerSmplr [[sampler(1)]])
+{
+    main0_out out = {};
+    int2 size = int2(frame.get_width(), frame.get_height());
+    int2 p = min(int2(in.frag_uv * float2(size)), (size - int2(1)));
+    float3 b = frame.read(uint2(p), 0).xyz;
+    float4 f = layer.read(uint2(p), 0);
+    float3 result = b;
+    if (f.w > 0.5)
+    {
+        int mode = int(_65.params.x + 0.5);
+        if (mode == 1)
+        {
+            result = (b * 0.5) + (f.xyz * 0.5);
+        }
+        else
+        {
+            if (mode == 2)
+            {
+                result = b + f.xyz;
+            }
+            else
+            {
+                if (mode == 3)
+                {
+                    result = b - f.xyz;
+                }
+                else
+                {
+                    if (mode == 4)
+                    {
+                        result = b + (f.xyz * 0.25);
+                    }
+                    else
+                    {
+                        result = f.xyz;
+                    }
+                }
+            }
+        }
+    }
+    out.out_color = float4(fast::clamp(result, float3(0.0), float3(1.0)), 1.0);
+    return out;
+}
+

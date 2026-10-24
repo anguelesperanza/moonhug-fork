@@ -1,0 +1,43 @@
+#include <metal_stdlib>
+#include <simd/simd.h>
+
+using namespace metal;
+
+struct InterlaceUBO
+{
+    float4 params;
+};
+
+struct main0_out
+{
+    float4 out_color [[color(0)]];
+};
+
+struct main0_in
+{
+    float2 frag_uv [[user(locn0)]];
+};
+
+fragment main0_out main0(main0_in in [[stage_in]], constant InterlaceUBO& _13 [[buffer(1)]], texture2d<float> tex [[texture(0)]], sampler texSmplr [[sampler(0)]], float4 gl_FragCoord [[position]])
+{
+    main0_out out = {};
+    int field = int(_13.params.x + ((_13.params.x < 0.0) ? (-0.5) : 0.5));
+    bool _31 = field >= 0;
+    bool _45;
+    if (_31)
+    {
+        _45 = (int(gl_FragCoord.y) & 1) != field;
+    }
+    else
+    {
+        _45 = _31;
+    }
+    if (_45)
+    {
+        discard_fragment();
+    }
+    int2 size = int2(tex.get_width(), tex.get_height());
+    out.out_color = tex.read(uint2(min(int2(in.frag_uv * float2(size)), (size - int2(1)))), 0);
+    return out;
+}
+
